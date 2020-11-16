@@ -32,7 +32,10 @@ if($ketemu > 0){
     session_regenerate_id();
     $sid_baru = session_id();
     mysqli_query($conn, "UPDATE users SET id_session= '$sid_baru' WHERE username = '$username'");
-    header("location:");
+    header("location:media.php?module=beranda");
+} else{
+    echo "<h1>Gagal Login</h1>";
+    echo "<a href='index.php'>Ulangi</a>";
 }
 
 ?>
