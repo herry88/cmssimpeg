@@ -10,68 +10,50 @@ else{
     switch($act){
         //tampil outputnya
         default:
-            echo "
-        <section class='section'>
-            <div class=\"card\">
-            <div class=\"card-header\">
-              <h4>Data Modul</h4><br>
+        echo "
+           <section class = \"section\">
+              <div class=\"section-header\">
+                  <h1>Tampil Data Modul</h1>
+                <div class=\"section-header-breadcrumb\">
+                  <div class=\"breadcrumb-item active\"><a href=\"#\">Dashboard</a></div>
+                  <div class=\"breadcrumb-item\"><a href=\"#\">Layout</a></div>
+                  <div class=\"breadcrumb-item\">Default Layout</div>
+                </div>
+              </div>
+
+              <div class=\"section-body\">
+                <h2 class=\"section-title\">Halaman Tampil Modul</h2>
+                <p class=\"section-lead\">Halaman ini menampilkan data modul.</p>
+                
+              </div>";
+        echo"
+          <div class='card'>
+            <div class='card-header'>
+              <h4>Tampil Data Modul</h4>
             </div>
             <div class=\"card-body\">
-
-            <input type='button' class='btn btn-info' onclick=window.location.href=\"?module=modul&act=tambahmodul\" value='Add Data'>
-              <table class=\"table\">
-                <thead>
-                  <tr>
-                    <th scope=\"col\">NO</th>
-                    <th scope=\"col\">Nama Modul</th>
-                    <th scope=\"col\">Link</th>
-                    <th scope=\"col\">Aktif</th>
-                    <th scope=\"col\">Tools</th>
-                  </tr>
-                </thead>";
-            $query = "SELECT * FROM modul ORDER BY urutan";
-            $o = mysqli_query($conn, $query);
-            $no = 1;
-            while($m  = mysqli_fetch_array($o)){
-                echo "
-                <tbody>
+               <table class=\"table\">
+                 <thead>
                     <tr>
-                        <td>$no</td>
-                        <td>$m[nama_modul]</td>
-                        <td>$m[link]</td>
-                        <td>$m[aktif]</td>
-                        <td><a href='#'>Edit</a></td>
+                      <th scope=\"col\">#</th>
+                      <th scope=\"col\">Nama Modul</th>
+                      <th scope=\"col\">Link</th>
+                      <th scope=\"col\">Status</th>
+                      <th scope=\"col\">Tools</th>
                     </tr>
-                </tbody>
-                ";
-                $no++;
-            }
-                echo "
-              </table>
+                 </thead>";
+                 
+
+        echo"
+               </table>
+                
             </div>
-          </div>";
-
-          echo "</section>";
-        break;
-        //tambah modul
-        case "tambahmodul":
-            echo "
-            <section class=\"section\">
-                <div class=\"section-header\">
-                    <h1>Tambah Modul</h1>
-                    <div class=\"section-header-breadcrumb\">
-                        <div class=\"breadcrumb-item active\"><a href=\"#\">Dashboard</a></div>
-                        <div class=\"breadcrumb-item\"><a href=\"#\">Forms</a></div>
-                        <div class=\"breadcrumb-item\">Editor</div>
-                        </div>
-                    </div>
-                </div>
-
-               
-          </section>
-            ";
-        break;
-
+          </div>
+        ";
+        echo"
+           </section>
+        ";
+    break;
 
     }
 }
