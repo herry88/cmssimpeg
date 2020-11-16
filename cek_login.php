@@ -31,7 +31,8 @@ if($ketemu > 0){
     $sid_lama = session_id();
     session_regenerate_id();
     $sid_baru = session_id();
-    mysqli_query("UPDATE users SET id_session= '$sid_baru' WHERE username = '$username'");
+    mysqli_query($conn, "UPDATE users SET id_session= '$sid_baru' WHERE username = '$username'");
+    header("location:");
 }
 
 ?>
