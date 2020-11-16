@@ -11,14 +11,14 @@ else{
         //tampil outputnya
         default:
             echo "
+        <section class='section'>
             <div class=\"card\">
             <div class=\"card-header\">
               <h4>Data Modul</h4><br>
             </div>
             <div class=\"card-body\">
 
-            <button class='btn btn-info text-right'>Add Data</button>
-
+            <input type='button' class='btn btn-info' onclick=window.location.href=\"?module=modul&act=tambahmodul\" value='Add Data'>
               <table class=\"table\">
                 <thead>
                   <tr>
@@ -50,6 +50,27 @@ else{
               </table>
             </div>
           </div>";
+
+          echo "</section>";
+        break;
+        //tambah modul
+        case "tambahmodul":
+            echo "
+            <section class=\"section\">
+                <div class=\"section-header\">
+                    <h1>Tambah Modul</h1>
+                    <div class=\"section-header-breadcrumb\">
+                        <div class=\"breadcrumb-item active\"><a href=\"#\">Dashboard</a></div>
+                        <div class=\"breadcrumb-item\"><a href=\"#\">Forms</a></div>
+                        <div class=\"breadcrumb-item\">Editor</div>
+                        </div>
+                    </div>
+                </div>
+
+               
+          </section>
+            ";
+        break;
 
 
     }
