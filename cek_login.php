@@ -1,5 +1,5 @@
 <?php
-include "../config/connect.php";
+include "config/connect.php";
 
 //fungso injection
 function anti_injection($data){
@@ -15,7 +15,7 @@ $password = $_POST['password'];
 $query = "SELECT * FROM users WHERE username ='$username' AND password  = '$password' AND blokir = 'T'";
 $login = mysqli_query($conn, $query);
 $ketemu = mysqli_num_rows($login);
-$r = mysqli_fetch_array($login);
+$r      = mysqli_fetch_array($login);
 
 //jika cocok halaman page
 if($ketemu > 0){
