@@ -1,5 +1,5 @@
 <?php
-include "../config/connect.php";
+include "config/connect.php";
 
 //fungso injection
 function anti_injection($data){
