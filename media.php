@@ -64,7 +64,7 @@
               <li class="menu-header">Dashboard</li>
               <li><a class="nav-link" href="#"><i class="far fa-home"></i> <span>Dashboard</span></a></li>
               <?php include "menu.php"; ?>
-              <li><a class="nav-link" href="#"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
+              <li><a class="nav-link" href="logout.php"><i class="far fa-square"></i> <span>Logout</span></a></li>
 
               <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>
           </ul>
