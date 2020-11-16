@@ -9,7 +9,7 @@ function anti_injection($data){
 
 //deklarasikan form
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = md5($_POST['password']);
 
 //fungsi loginnya
 $query = "SELECT * FROM users WHERE username ='$username' AND password  = '$password' AND blokir = 'T'";

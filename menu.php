@@ -20,6 +20,3 @@
     }
 
 ?>
-
-<li class="menu-header">Starter</li>
-<li class="menu-header">Stisla</li>
