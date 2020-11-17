@@ -4,6 +4,7 @@ if(empty($_SESSION['namauser']) AND empty($_SESSION['passuser'])){
     echo "<a href='index.php'>Ulangi</a>";
 } 
 else{
+  $aksi = "modul/mod_modul/aksi_modul.php";
     // mengatasi variabel yang belum di definisikan (notice undefined index)
     $act = isset($_GET['act']) ? ($_GET['act']) : '';
     
@@ -91,7 +92,7 @@ else{
               <h4>Halaman Tambah</h4>
             </div>
             <div class='card-body'>
-                <form action='#' method='POST'>
+                <form action='$aksi?module=modul&act=input' method='POST'>
                   <table class='table table-bordered'>
                       <tr>
                         <td><strong>Nama Modul :</strong></td>
