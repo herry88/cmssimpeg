@@ -62,7 +62,7 @@
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
-              <li><a class="nav-link" href="#"><i class="far fa-home"></i> <span>Dashboard</span></a></li>
+              <li><a class="nav-link" href="?module=beranda"><i class="far fa-home"></i> <span>Dashboard</span></a></li>
               <?php include "menu.php"; ?>
               <li><a class="nav-link" href="logout.php"><i class="far fa-square"></i> <span>Logout</span></a></li>
 
