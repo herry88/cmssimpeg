@@ -1,3 +1,4 @@
+
 <?php 
 if(empty($_SESSION['username']) AND empty($_SESSION['passuser'])){
     echo "<h1>Gagal Login</h1><br><br>";
@@ -30,7 +31,16 @@ else{
 
 
     else{
-        echo "Modul Tidak ada";
+        echo "<section class = \"section\">
+        <div class=\"section-header\">
+        <h1>Modul Tidak Ada</h1>
+          <div class=\"section-header-breadcrumb\">
+            <div class=\"breadcrumb-item active\"><a href=\"#\">Dashboard</a></div>
+            <div class=\"breadcrumb-item\"><a href=\"#\">Layout</a></div>
+            <div class=\"breadcrumb-item\">Default Layout</div>
+          </div>
+        </div>
+        </section>";
     }
 
 
