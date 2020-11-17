@@ -41,10 +41,26 @@ else{
                       <th scope=\"col\">Status</th>
                       <th scope=\"col\">Tools</th>
                     </tr>
-                 </thead>";
-                 
+                 </thead>
+                 <tbody>";
 
-        echo"
+                 $query = "SELECT * FROM modul ORDER BY urutan ";
+                 $hasil = mysqli_query($conn, $query);
+                 while($r = mysqli_fetch_array($hasil)){
+                    echo "
+                      <tr>
+                          <td>$r[urutan]</td>
+                          <td>$r[nama_modul]</td>
+                          <td>$r[link]</td>
+                          <td>$r[status]</td>
+                          <td><a href='#' class='btn btn-success'>Edit</a><a href='#' class='btn btn-danger'>Delete</a></td>
+                      </tr>
+                    ";
+                 }
+
+
+
+        echo"</tbody>
                </table>
                 
             </div>
