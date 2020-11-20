@@ -41,6 +41,7 @@ else{
                       <th scope=\"col\">Nama Modul</th>
                       <th scope=\"col\">Link</th>
                       <th scope=\"col\">Status</th>
+                      <th scope=\"col\">Link Status</th>
                       <th scope=\"col\">Tools</th>
                     </tr>
                  </thead>
@@ -54,8 +55,14 @@ else{
                           <td>$r[urutan]</td>
                           <td>$r[nama_modul]</td>
                           <td>$r[link]</td>
-                          <td>$r[status]</td>
-                          <td><a href='#' class='btn btn-success'>Edit</a></td>
+                          <td>$r[status]</td>";
+                           if($r['aktif'] == 'Y'){
+                              echo "<td><a href='#' class=\"btn btn-info\">$r[aktif]</a></td>";
+                           } else{
+                            echo "<td><a href='#' class=\"btn btn-danger\">$r[aktif]</a></td>";
+                           }
+                          echo"
+                          <td><a href='?module=modul&act=editmodul&id=$r[id_modul]' class='btn btn-success'>Edit</a></td>
                       </tr>
                     ";
                  }
@@ -106,12 +113,8 @@ else{
                         <td colspan='2'><input type='submit' class='btn btn-primary' value='Simpan Data'></td>                      </tr>
                   </table>
                 </form>
-            
             </div>
-          
-          </div>
-        ";
-
+          </div>";
         echo "</section>";
     break;
 
