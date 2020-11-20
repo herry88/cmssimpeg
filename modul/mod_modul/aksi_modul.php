@@ -23,7 +23,7 @@ if(empty($_SESSION['namauser']) AND empty($_SESSION['passuser'])){
         mysqli_query($conn, $input);
         header("location:../../media.php?module=".$module);        
     }
-    //Update Data modul
+    //Update Data modul adfa
 
 }
 ?>
